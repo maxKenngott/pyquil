@@ -247,7 +247,7 @@ class QuantumComputer:
         :param program: A Program
         :param to_native_gates: Whether to compile non-native gates to native gates.
         :param optimize: Whether to optimize the program to reduce the number of operations.
-        :param protoquil: Whether to restrict the input program to and the compiled program 
+        :param protoquil: Whether to restrict the input program to and the compiled program
             to protoquil (executable on QPU).
         :return: An executable binary suitable for passing to :py:func:`QuantumComputer.run`.
         """

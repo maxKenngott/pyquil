@@ -310,7 +310,7 @@ class QVMCompiler(AbstractCompiler):
         return self.client.call('get_version_info', rpc_timeout=1)
 
     @_record_call
-    def quil_to_native_quil(self, program: Program, protoquil = False) -> Program:
+    def quil_to_native_quil(self, program: Program, protoquil=False) -> Program:
         self.connect()
         request = NativeQuilRequest(quil=program.out(), target_device=self.target_device)
         response = self.client.call('quil_to_native_quil', request, protoquil=protoquil).asdict()  # type: Dict
