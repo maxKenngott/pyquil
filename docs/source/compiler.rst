@@ -119,6 +119,9 @@ The QPU is not able to execute all possible Quil programs.  At present, a Quil p
   a pair of qubits participating in a qubit-qubit interaction.
 * This is then followed by a block of ``MEASURE`` instructions.
 
+To instruct the compiler to produce Quil code that can be executed on a QPU, you can use the
+``protoquil`` keyword in a call to `compiler.quil_to_native_quil(program, protoquil=True)` or
+`qc.compile(program, protoquil=True)`.
 
 .. _pragma:
 
